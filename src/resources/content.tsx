@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Ali",
+  lastName: "Bhutto",
+  name: `Ali Raza Bhutto`,
+  role: "BSAI Student | AI & Robotics Enthusiast",
+  avatar: "https://avatars.githubusercontent.com/u/257011925?v=4",
+  email: "the0theraliiii@gmail.com",
+  location: "Asia/Karachi", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Urdu"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>My weekly newsletter about AI and robotics</>,
 };
 
 const social: Social = [
@@ -25,25 +25,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Ali-cmd354",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/ali-raza-bhutto-a968a9402/",
     essential: true,
   },
   {
@@ -59,24 +47,24 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Portfolio website of ${person.name}, passionate about AI, robotics, and intelligent systems`,
+  headline: <>Exploring AI, Robotics & Intelligent Systems</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured Project</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Ali, a BSAI student at <Text as="span" size="xl" weight="strong">SZABIST</Text>, deeply passionate about <br /> Artificial Intelligence, automation, and building intelligent systems that solve real-world problems.
 </>
   ),
 };
@@ -85,7 +73,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, passionate AI and robotics enthusiast`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,7 +82,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,52 +90,24 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Ali is a BSAI (Bachelor of Science in Artificial Intelligence) student at SZABIST, passionate about exploring the intersection of artificial intelligence, robotics, and automation. With a keen interest in agentic AI and robotic engineering, Ali is dedicated to building intelligent systems that solve real-world problems and drive innovation in the tech space.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Education & Learning",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "SZABIST (Shaheed Zulfiqar Ali Bhutto Institute of Science and Technology)",
+        timeframe: "Present",
+        role: "BSAI Student",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Pursuing a Bachelor's degree in Artificial Intelligence with specialized focus on Agentic and Robotic AI Engineering (CAE).
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Engaging in cutting-edge coursework covering machine learning, deep learning, robotics control, and autonomous systems.
           </>,
         ],
         images: [],
@@ -156,77 +116,76 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Key Interests",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Artificial Intelligence",
+        description: <>Machine learning, deep learning, and neural networks</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Robotics & Automation",
+        description: <>Robotic systems, control engineering, and autonomous agents</>,
+      },
+      {
+        name: "Agentic AI",
+        description: <>Building intelligent autonomous agents and multi-agent systems</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Python",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Core programming language for AI/ML development and algorithms.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Python",
+            icon: "python",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Machine Learning",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Experience with ML frameworks and building predictive models.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "TensorFlow",
+            icon: "tensorflow",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "PyTorch",
+            icon: "pytorch",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Scikit-learn",
+            icon: "scikit-learn",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
+        images: [],
+      },
+      {
+        title: "Robotics & Control",
+        description: (
+          <>Working with robotic systems and control algorithms.</>
+        ),
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "ROS",
+            icon: "ros",
+          },
+          {
+            name: "Control Systems",
+            icon: "engineering",
           },
         ],
+        images: [],
       },
     ],
   },
@@ -235,7 +194,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Thoughts on AI & Robotics...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -245,7 +204,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `AI and robotics projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
